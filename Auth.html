@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Auth — Ryuga</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<a href="index.html" class="back">← Back</a>
+
+<div class="auth-box">
+
+  <div class="auth-title">Ryuga</div>
+
+  <div class="auth-switch">
+    <button id="loginBtn" class="active">Login</button>
+    <button id="registerBtn">Register</button>
+  </div>
+
+<form class="form active" id="loginForm">
+  <div class="field">
+    <label>Email</label>
+    <input type="email" placeholder="your@email.com">
+  </div>
+
+  <div class="field password-field">
+    <label>Password</label>
+    <input type="password" placeholder="••••••••">
+    <span class="eye-toggle">
+        <svg viewBox="0 0 24 24" class="eye-icon">
+            <path d="M2 12 
+                    C5 9.2, 9 8.2, 12 8.2 
+                    C15 8.2, 19 9.2, 22 12 
+                    C19 14.8, 15 15.8, 12 15.8 
+                    C9 15.8, 5 14.8, 2 12 Z"/>
+            <circle cx="12" cy="12" r="3.2"/>
+            <circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+            <line x1="3" y1="20" x2="21" y2="4" class="slash"/>
+        </svg>
+    </span>
+  </div>
+
+  <div class="form-extra">
+    <label class="checkbox">
+      <input type="checkbox">
+      <span>Remember me</span>
+    </label>
+  </div>
+
+  <button class="btn" type="button" onclick="goProfile()">Sign In</button>
+</form>
+
+<form class="form" id="registerForm">
+  <div class="field">
+    <label>Email</label>
+    <input type="email" placeholder="your@email.com">
+  </div>
+
+  <div class="field password-field">
+    <label>Password</label>
+    <input type="password" placeholder="••••••••">
+    <span class="eye-toggle">
+        <svg viewBox="0 0 24 24" class="eye-icon">
+            <path d="M2 12 
+                    C5 9.2, 9 8.2, 12 8.2 
+                    C15 8.2, 19 9.2, 22 12 
+                    C19 14.8, 15 15.8, 12 15.8 
+                    C9 15.8, 5 14.8, 2 12 Z"/>
+            <circle cx="12" cy="12" r="3.2"/>
+            <circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+            <line x1="3" y1="20" x2="21" y2="4" class="slash"/>
+        </svg>
+    </span>
+  </div>
+
+  <div class="field password-field">
+    <label>Repeat Password</label>
+    <input type="password" placeholder="••••••••">
+    <span class="eye-toggle">
+        <svg viewBox="0 0 24 24" class="eye-icon">
+            <path d="M2 12 
+                    C5 9.2, 9 8.2, 12 8.2 
+                    C15 8.2, 19 9.2, 22 12 
+                    C19 14.8, 15 15.8, 12 15.8 
+                    C9 15.8, 5 14.8, 2 12 Z"/>
+            <circle cx="12" cy="12" r="3.2"/>
+            <circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+            <line x1="3" y1="20" x2="21" y2="4" class="slash"/>
+        </svg>
+    </span>
+  </div>
+
+  <button class="btn" type="button" onclick="goProfile()">Create Account</button>
+</form>
+
+</div>
+<script src="auth.js"></script>
+</body>
+</html>

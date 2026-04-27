@@ -1,0 +1,185 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#080808;
+  --surface:#0e0e0e;
+  --border:rgba(255,255,255,0.06);
+  --border-hover:rgba(255,255,255,0.18);
+  --text:#f0f0f0;
+  --muted:#555;
+  --muted2:#333;
+  --mono:'DM Mono',monospace;
+  --display:'Syne',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--mono);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:20px;
+}
+
+.auth-box{
+  width:100%;
+  max-width:420px;
+}
+
+.auth-title{
+  font-family:var(--display);
+  font-size:36px;
+  font-weight:800;
+  margin-bottom:40px;
+}
+
+.auth-switch{
+  display:flex;
+  gap:12px;
+  margin-bottom:24px;
+}
+
+.auth-switch button{
+  flex:1;
+  padding:10px;
+  background:transparent;
+  border:1px solid var(--border);
+  color:var(--muted);
+  cursor:pointer;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+}
+
+.auth-switch button.active{
+  border-color:var(--text);
+  color:var(--text);
+}
+
+.form{
+  display:none;
+}
+
+.form.active{
+  display:block;
+}
+
+.field{
+  border-bottom:1px solid var(--border);
+}
+
+.field label{
+  display:block;
+  font-size:11px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--muted2);
+  padding:16px 0 4px;
+}
+
+.field input{
+  width:100%;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:var(--text);
+  padding-bottom:16px;
+  font-family:var(--mono);
+}
+
+.field input::placeholder{
+  color:var(--muted2);
+}
+
+.btn{
+  margin-top:24px;
+  width:100%;
+  padding:14px;
+  background:var(--text);
+  color:var(--bg);
+  border:none;
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  opacity:0.9;
+}
+
+.btn:hover{
+  opacity:1;
+}
+
+.back{
+  position:absolute;
+  top:20px;
+  left:20px;
+  font-size:12px;
+  color:var(--muted);
+  text-decoration:none;
+}
+.back:hover{color:var(--text)}
+
+.password-field{
+  position:relative;
+}
+
+.eye-toggle{
+  position:absolute;
+  right:0;
+  bottom:16px;
+  cursor:pointer;
+  color:var(--muted2);
+  display:flex;
+  align-items:center;
+}
+
+
+.eye-icon{
+  width:20px;
+  height:20px;
+  stroke:currentColor;
+  fill:none;
+  stroke-width:2;
+}
+
+.eye-icon path{
+  stroke-linecap:butt;
+  stroke-linejoin:miter;
+}
+
+.eye-icon circle:first-of-type{
+  stroke-width:1.8;
+}
+
+.eye-icon .slash{
+  opacity:0;
+  stroke-width:2.4;
+  transition:0.2s;
+}
+
+.eye-toggle.active .slash{
+  opacity:1;
+}
+
+.eye-toggle:hover{
+  color:var(--text);
+}
+
+.form-extra{
+  margin-top:12px;
+}
+
+.checkbox{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.checkbox input{
+  accent-color:#fff;
+  cursor:pointer;
+}

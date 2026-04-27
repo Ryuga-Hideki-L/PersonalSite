@@ -1,10 +1,8 @@
-// Навбар появляется при скролле
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Анимации при появлении в viewport
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -16,7 +14,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(r => observer.observe(r));
 
-// Плавный скролл(zakoki)
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
@@ -25,7 +22,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Заглушка для формы заполнения (заменить на fetch('/api/contact', ...) когда будет Go)
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('button');

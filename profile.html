@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Profile — Ryuga</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="profile.css">
+
+</head>
+<body>
+
+<a href="index.html" class="back">← Back</a>
+
+<div class="dashboard">
+  <div class="sidebar">
+    <div class="avatar">
+        <input type="file" id="avatarInput" accept="image/*" hidden>
+        <div class="avatar-circle" id="avatarCircle">
+            <span id="avatarPlus">+</span>
+            <img id="avatarPreview" src="" alt="" />
+        </div>
+
+        <div class="nickname">Ryuga</div>
+        <div class="user-tag">@user</div>
+    </div>
+
+    <div class="menu">
+      <div class="menu-item active" data-tab="profile">Profile</div>
+      <div class="menu-item" data-tab="security">Security</div>
+      <div class="menu-item" data-tab="support">Support</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="tab active" id="profile">
+      <h2 class="section-title">Profile Settings</h2>
+
+      <div class="field editable">
+        <label>Nickname</label>
+        <div class="input-wrap">
+          <input type="text" value="Ryuga" disabled>
+          <span class="edit-btn">✏</span>
+        </div>
+      </div>
+
+      <div class="field editable">
+        <label>Bio</label>
+        <div class="input-wrap">
+          <textarea disabled>About you...</textarea>
+          <span class="edit-btn">✏</span>
+        </div>
+      </div>
+
+      <div class="field editable">
+        <label>Contacts</label>
+        <div class="input-wrap">
+          <input type="text" value="Telegram / Email" disabled>
+          <span class="edit-btn">✏</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab" id="security">
+      <h2 class="section-title">Security</h2>
+
+      <div class="field editable">
+        <label>Password</label>
+        <div class="input-wrap">
+          <input type="password" value="********" disabled>
+          <span class="edit-btn">✏</span>
+        </div>
+      </div>
+
+      <div class="field editable">
+        <label>Two-Factor Auth</label>
+        <div class="input-wrap">
+          <input type="text" value="Disabled" disabled>
+          <span class="edit-btn">✏</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab" id="support">
+      <h2 class="section-title">Support</h2>
+
+      <div class="field">
+        <label>Contact</label>
+        <div class="input-wrap">
+          <input type="text" value="support@ryuga.dev" disabled>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Status</label>
+        <div class="input-wrap">
+          <input type="text" value="Usually replies within 24h" disabled>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>

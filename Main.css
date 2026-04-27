@@ -23,7 +23,6 @@ body{
   min-height:100vh;
 }
 
-/* GRAIN */
 body::before{
   content:'';
   position:fixed;inset:0;
@@ -33,7 +32,6 @@ body::before{
   pointer-events:none;
 }
 
-/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;
   z-index:50;
@@ -57,18 +55,70 @@ nav.scrolled{
   color:var(--text);
   text-decoration:none;
 }
-.nav-links{display:flex;gap:28px}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+/* ссылки */
+.nav-links{
+  display:flex;
+  gap:28px;
+}
+
 .nav-links a{
   color:var(--muted);
   text-decoration:none;
   font-size:12px;
   letter-spacing:0.08em;
   text-transform:uppercase;
-  transition:color 0.2s;
+  transition:all 0.25s ease;
 }
+
+/* НЕОНОВЫЙ ХОВЕР */
+.nav-links a:hover{
+  color:#fff;
+  text-shadow:
+    0 0 4px rgba(255,255,255,0.9),
+    0 0 8px rgba(255,255,255,0.7),
+    0 0 16px rgba(255,255,255,0.5),
+    0 0 24px rgba(255,255,255,0.3);
+
+  
+}
+
+/* кнопка login */
+.nav-auth{
+  padding:10px 18px;
+  border:1px solid var(--border);
+  color:var(--muted);
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  transition:all 0.25s ease;
+}
+
+.nav-auth:hover{
+  color:#fff;
+  border-color:#fff;
+
+  box-shadow:
+    0 0 4px rgba(255,255,255,0.8),
+    0 0 10px rgba(255,255,255,0.6),
+    0 0 20px rgba(255,255,255,0.4);
+
+  text-shadow:
+    0 0 2px #fff,
+    0 0 6px rgba(255,255,255,0.7);
+
+  background:rgba(255,255,255,0.04);
+}
+
 .nav-links a:hover{color:var(--text)}
 
-/* HERO */
 .hero{
   min-height:100vh;
   display:flex;
@@ -157,7 +207,6 @@ nav.scrolled{
   writing-mode:vertical-rl;
 }
 
-/* Секции */
 .section{
   padding:120px 40px;
   border-top:1px solid var(--border);
@@ -180,7 +229,6 @@ nav.scrolled{
   letter-spacing:-0.03em;
 }
 
-/* Проджекты */
 .projects-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -252,7 +300,6 @@ nav.scrolled{
   color:var(--text);
 }
 
-/* О мне */
 .about-layout{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -286,7 +333,6 @@ nav.scrolled{
 }
 .stack-status.active{color:var(--text)}
 
-/* Контакты */
 .contact-layout{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -311,7 +357,6 @@ nav.scrolled{
 .contact-link-arrow{transition:transform 0.2s}
 .contact-link:hover .contact-link-arrow{transform:translate(4px,-4px)}
 
-/* Форм */
 .form-grid{display:flex;flex-direction:column}
 .field{
   border-bottom:1px solid var(--border);
@@ -340,7 +385,6 @@ nav.scrolled{
 .field input::placeholder,.field textarea::placeholder{color:var(--muted2)}
 .form-submit{margin-top:24px}
 
-/* Футер */
 footer{
   padding:40px;
   border-top:1px solid var(--border);
@@ -359,7 +403,6 @@ footer{
   color:var(--muted2);
 }
 
-/* Анимация */
 .reveal{
   opacity:0;
   transform:translateY(24px);
